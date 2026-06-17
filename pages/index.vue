@@ -90,6 +90,8 @@ const channel = {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* Hero */

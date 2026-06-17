@@ -24,6 +24,8 @@
 
 <style scoped>
 .nav {
+  max-width: 1280px;
+  margin: 0 auto;
   position: relative;
   z-index: 100;
   display: flex;
