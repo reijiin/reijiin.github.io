@@ -5,16 +5,20 @@
 }
 
 :root {
-  --red:       #e03020;
-  --red-dim:   rgba(224, 48, 32, 0.18);
-  --red-line:  rgba(224, 48, 32, 0.25);
-  --bg:        #0a0a0a;
+  --red:       #ff2e1a;
+  --red-dim:   rgba(255, 46, 26, 0.15);
+  --red-line:  rgba(255, 46, 26, 0.4);
+  --red-glow:  rgba(255, 46, 26, 0.6);
+  --cyan:      #00e5ff;
+  --cyan-dim:  rgba(0, 229, 255, 0.15);
+  --cyan-glow: rgba(0, 229, 255, 0.55);
+  --bg:        #0a0b0e;
   --bg-card:   rgba(255, 255, 255, 0.03);
   --text:      #e8e8e8;
   --text-muted: rgba(232, 232, 232, 0.65);
   --font-en:   'Orbitron', monospace;
   --font-jp:   'Noto Sans JP', sans-serif;
-  --border:    rgba(224, 48, 32, 0.2);
+  --border:    rgba(255, 46, 26, 0.3);
 }
 
 html, body {

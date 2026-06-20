@@ -12,13 +12,8 @@
         </h1>
         <p class="hero-roman">REIJIIN — 02</p>
         <p class="hero-desc">
-          ローカルAIによる映像生成スタジオ。<br>
-          キャラクターが踊る、新しい映像体験を創る。
+          ローカルAIによる映像生成スタジオ。
         </p>
-        <div class="hero-btns">
-          <NuxtLink to="/channels" class="btn btn-fill">CHANNELS</NuxtLink>
-          <NuxtLink to="/works" class="btn">WORKS</NuxtLink>
-        </div>
       </div>
 
       <div class="hero-deco" aria-hidden="true">
@@ -126,7 +121,8 @@ const channel = {
   font-family: var(--font-en);
   font-size: 11px;
   letter-spacing: 6px;
-  color: var(--text-muted);
+  color: var(--cyan);
+  text-shadow: 0 0 8px var(--cyan-glow);
   margin-bottom: 20px;
 }
 
@@ -229,7 +225,8 @@ const channel = {
   font-family: var(--font-en);
   font-size: 9px;
   letter-spacing: 4px;
-  color: rgba(224, 48, 32, 0.45);
+  color: var(--cyan);
+  text-shadow: 0 0 6px var(--cyan-glow);
   white-space: nowrap;
 }
 
