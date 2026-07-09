@@ -1,0 +1,29 @@
+[
+  {
+    "id": "sakura",
+    "name": "サクラの国の枯れない桜",
+    "desc": "D.C.〜ダ・カーポ〜シリーズ特化型のチャンネルです",
+    "url": "https://www.youtube.com/@sakuranokuni_archives",
+    "thumbnail": "https://img.youtube.com/vi/ps6zEkaka1w/hqdefault.jpg",
+    "status": "live",
+    "label": "CH-01 · LIVE"
+  },
+  {
+    "id": "ch02",
+    "name": "COMING SOON",
+    "desc": "近日公開予定",
+    "url": "",
+    "thumbnail": "",
+    "status": "coming",
+    "label": "CH-02 · COMING SOON"
+  },
+  {
+    "id": "ch03",
+    "name": "COMING SOON",
+    "desc": "近日公開予定",
+    "url": "",
+    "thumbnail": "",
+    "status": "coming",
+    "label": "CH-03 · COMING SOON"
+  }
+]

@@ -24,39 +24,67 @@
       </div>
     </section>
 
-    <!-- Divider -->
+    <!-- ピックアップ動画 -->
+    <div class="divider">
+      <span class="divider-line" />
+      <span class="divider-label">PICKUP VIDEOS — ピックアップ</span>
+      <span class="divider-line" />
+    </div>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">FEATURED</span>
+        <span class="section-sub">// SELECTED WORKS</span>
+      </div>
+      <div class="video-grid">
+        <a
+          v-for="v in pickupVideos"
+          :key="v.id"
+          :href="`https://www.youtube.com/watch?v=${v.id}`"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-card"
+        >
+          <div class="video-thumb">
+            <img :src="`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`" :alt="v.title" />
+            <span class="play-icon">▶</span>
+          </div>
+          <div class="video-info">
+            <p class="video-title">{{ v.title }}</p>
+            <p class="video-meta">{{ v.channel }} · {{ v.date }}</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- チャンネル一覧 -->
     <div class="divider">
       <span class="divider-line" />
       <span class="divider-label">CHANNELS — 配信チャンネル</span>
       <span class="divider-line" />
     </div>
-
-    <!-- Channels (1枚だけ) -->
     <section class="section">
       <div class="section-header">
         <span class="section-title">ACTIVE CHANNELS</span>
         <span class="section-sub">// 01 LIVE</span>
       </div>
-
       <div class="channels">
         <a
-          :href="channel.url"
+          v-for="ch in channels"
+          :key="ch.id"
+          :href="ch.url"
           target="_blank"
           rel="noopener noreferrer"
           class="channel-card"
+          :class="{ 'is-coming': ch.status === 'coming' }"
         >
           <div class="channel-thumb">
-            <img
-              v-if="channel.thumbnail"
-              :src="channel.thumbnail"
-              :alt="channel.name"
-            />
+            <img v-if="ch.thumbnail" :src="ch.thumbnail" :alt="ch.name" />
             <span v-else class="thumb-icon">▶</span>
           </div>
           <div class="channel-info">
-            <p class="channel-name">{{ channel.name }}</p>
-            <p class="channel-desc">{{ channel.desc }}</p>
-            <span class="channel-tag">// CH-01 · YOUTUBE</span>
+            <p class="channel-name">{{ ch.name }}</p>
+            <p class="channel-desc">{{ ch.desc }}</p>
+            <span class="channel-tag">// {{ ch.label }}</span>
           </div>
         </a>
       </div>
@@ -71,13 +99,25 @@
 </template>
 
 <script setup lang="ts">
-// ここにYouTubeチャンネルの情報を入れる
-const channel = {
-  name: 'サクラの国の枯れない桜',       
-  desc: 'D.C.〜ダ・カーポ〜シリーズ特化型のチャンネルです',    
-  url: 'https://www.youtube.com/@sakuranokuni_archives', 
-  thumbnail: 'https://img.youtube.com/vi/ps6zEkaka1w/hqdefault.jpg',  
-}
+import pickupData from '~/public/data/pickup.json'
+import channelsData from '~/public/data/channels.json'
+
+const pickupVideos = pickupData as Array<{
+  id: string
+  title: string
+  channel: string
+  date: string
+}>
+
+const channels = channelsData as Array<{
+  id: string
+  name: string
+  desc: string
+  url: string
+  thumbnail: string
+  status: 'live' | 'coming'
+  label: string
+}>
 </script>
 
 <style scoped>
@@ -131,36 +171,6 @@ const channel = {
   color: var(--text-muted);
   line-height: 2;
   margin-bottom: 28px;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  border: 1px solid var(--red);
-  color: var(--red);
-  font-family: var(--font-en);
-  font-size: 10px;
-  letter-spacing: 3px;
-  padding: 10px 24px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.btn:hover {
-  background: var(--red-dim);
-}
-
-.btn-fill {
-  background: var(--red);
-  color: #fff;
-}
-
-.btn-fill:hover {
-  background: #c02010;
 }
 
 /* Deco */
@@ -256,12 +266,81 @@ const channel = {
   letter-spacing: 2px;
 }
 
-/* Channel card */
+/* ピックアップ動画 */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 800px;
+}
+
+.video-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.video-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(255, 46, 26, 0.05);
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+
+.video-card:hover .video-thumb img { opacity: 0.7; }
+
+.play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: transparent;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.video-card:hover .play-icon {
+  color: #fff;
+  text-shadow: 0 0 14px var(--cyan-glow);
+}
+
+.video-info { padding: 12px 14px; }
+
+.video-title {
+  font-size: 13px;
+  color: rgba(232, 232, 232, 0.9);
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.video-meta {
+  font-family: var(--font-en);
+  font-size: 9px;
+  color: rgba(0, 229, 255, 0.55);
+  letter-spacing: 1px;
+}
+
+/* チャンネルカード */
 .channels {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
-  max-width: 600px;
 }
 
 .channel-card {
@@ -282,12 +361,17 @@ const channel = {
   width: 3px;
   height: 100%;
   background: var(--red);
-  opacity: 0.6;
+  box-shadow: 0 0 8px var(--red-glow);
 }
 
 .channel-card:hover {
   border-color: rgba(224, 48, 32, 0.5);
   background: rgba(224, 48, 32, 0.05);
+}
+
+.channel-card.is-coming {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .channel-thumb {
@@ -330,7 +414,8 @@ const channel = {
 .channel-tag {
   font-family: var(--font-en);
   font-size: 9px;
-  color: rgba(224, 48, 32, 0.55);
+  color: var(--cyan);
+  text-shadow: 0 0 4px var(--cyan-glow);
   letter-spacing: 2px;
 }
 
@@ -368,5 +453,6 @@ const channel = {
   .hero { flex-direction: column; padding: 32px 16px 32px; gap: 24px; }
   .hero-deco { display: none; }
   .section, .divider, .footer { padding-left: 16px; padding-right: 16px; }
+  .video-grid { grid-template-columns: 1fr; }
 }
 </style>
