@@ -9,8 +9,9 @@
     </div>
 
     <ul class="nav-links">
-  <!--
+  <li><NuxtLink to="/schedule">SCHEDULE</NuxtLink></li>
   <li><NuxtLink to="/channels">CHANNELS</NuxtLink></li>
+  <!--
   <li><NuxtLink to="/works">WORKS</NuxtLink></li>
   <li><NuxtLink to="/about">ABOUT</NuxtLink></li>
   <li><NuxtLink to="/contact">CONTACT</NuxtLink></li>

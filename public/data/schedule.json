@@ -1,16 +1,34 @@
 [
   {
-    "date": "2025-06-20",
-    "title": "動画タイトルをここに",
+    "date": "2026-07-11",
+    "title": "白河ことり",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled"
+    "status": "scheduled",
+    "caption": "誕生日(6/20)祝いの動画のフルバージョンです"
   },
   {
-    "date": "2025-06-25",
-    "title": "動画タイトルをここに",
+    "date": "2026-07-12",
+    "title": "瑠川さら",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled"
+    "status": "scheduled",
+    "caption": "誕生日(7/7)祝いの動画のフルバージョンです"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "邑崎 遥月",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "Dal Segnoの動画です"
+  },
+  {
+    "date": "2026-07-11",
+    "title": "新規チャンネルの動画予定",
+    "channel": "???",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "???"
   }
 ]
