@@ -11,6 +11,18 @@
     "status": "live",
     "label": "CH-01 · LIVE"
   },
+    {
+    "id": "asuna",
+    "name": "Asuna Kaleidoscope",
+    "desc": "SAOのアスナ(結城明日奈)メインの特化型のチャンネルです",
+    "detail": "SAOのアスナをテーマにしたAI生成動画を投稿しています。",
+    "url": "https://youtu.be/ZFYcsP5WOgE",
+    "thumbnail": "/images/thumbnail_asuna2.png",
+    "embedVideoId": "",
+    "tags": ["SAO", "アスナ", "結城明日奈"],
+    "status": "live",
+    "label": "CH-02 · LIVE"
+  },
   {
     "id": "galaxy",
     "name": "？？？",
@@ -21,7 +33,7 @@
     "embedVideoId": "",
     "tags": ["アニメ", "2010年代", "2020年代"],
     "status": "coming",
-    "label": "CH-02 · COMING SOON"
+    "label": "CH-03 · COMING SOON"
   },
   {
     "id": "heroines",
@@ -33,7 +45,7 @@
     "embedVideoId": "",
     "tags": ["レトロゲーム", "レトロアニメ", "90年代", "00年代"],
     "status": "coming",
-    "label": "CH-03 · COMING SOON"
+    "label": "CH-04 · COMING SOON"
   },
   {
     "id": "trueroute",
@@ -44,18 +56,6 @@
     "thumbnail": "",
     "embedVideoId": "",
     "tags": ["ギャルゲー", "美少女ゲーム"],
-    "status": "coming",
-    "label": "CH-04 · COMING SOON"
-  },
-  {
-    "id": "asuna",
-    "name": "？？？",
-    "desc": "？？？",
-    "detail": "？？？",
-    "url": "",
-    "thumbnail": "",
-    "embedVideoId": "",
-    "tags": [],
     "status": "coming",
     "label": "CH-05 · COMING SOON"
   }
