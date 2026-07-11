@@ -47,7 +47,9 @@
               'is-empty': !cell.day,
               'is-today': cell.isToday,
               'is-past': cell.isPast,
+              'has-events': cell.events.length > 0,
             }"
+            @click="scrollToDate(cell.dateStr ?? null)"
           >
             <span v-if="cell.day" class="cal-day">{{ cell.day }}</span>
             <div v-if="cell.events.length" class="cal-events">
@@ -81,15 +83,25 @@
           :is="ev.url ? 'a' : 'div'"
           v-for="ev in filteredMonthEvents"
           :key="ev.date + ev.title"
+          :id="`event-${ev.date}`"
           :href="ev.url || undefined"
           target="_blank"
           rel="noopener noreferrer"
           class="event-item"
-          :class="[ev.status === 'uploaded' ? 'ev-item-uploaded' : 'ev-item-scheduled', ev.url ? 'is-link' : '']"
+          :class="[
+            ev.status === 'uploaded' ? 'ev-item-uploaded' : 'ev-item-scheduled',
+            ev.url ? 'is-link' : '',
+            highlightDate === ev.date ? 'is-highlight' : '',
+          ]"
         >
           <div class="ev-thumb">
             <img
-              v-if="ev.videoId"
+              v-if="ev.thumbnail"
+              :src="ev.thumbnail"
+              :alt="ev.title"
+            />
+            <img
+              v-else-if="ev.videoId"
               :src="`https://img.youtube.com/vi/${ev.videoId}/hqdefault.jpg`"
               :alt="ev.title"
             />
@@ -126,6 +138,7 @@ const schedule = scheduleData as Array<{
   channelId: string
   status: 'scheduled' | 'uploaded'
   videoId?: string
+  thumbnail?: string
   url?: string
   caption?: string
 }>
@@ -170,6 +183,7 @@ const calendarCells = computed(() => {
     const events = schedule.filter(e => e.date === dateStr)
     cells.push({
       day: d,
+      dateStr,
       isToday: dateStr === todayStr,
       isPast: dateStr < todayStr,
       events,
@@ -200,6 +214,26 @@ const filteredMonthEvents = computed(() => {
 function formatDate(dateStr: string) {
   const d = new Date(dateStr)
   return `${d.getMonth() + 1}/${d.getDate()}`
+}
+
+// カレンダークリック → リストにスクロール＆ハイライト
+const highlightDate = ref('')
+
+function scrollToDate(dateStr: string | null) {
+  if (!dateStr) return
+  const year = currentYear.value
+  const month = currentMonth.value
+  const prefix = `${year}-${String(month + 1).padStart(2, '0')}`
+  if (!dateStr.startsWith(prefix)) return
+
+  highlightDate.value = dateStr
+  nextTick(() => {
+    const el = document.getElementById(`event-${dateStr}`)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    setTimeout(() => { highlightDate.value = '' }, 1500)
+  })
 }
 </script>
 
@@ -448,6 +482,15 @@ function formatDate(dateStr: string) {
 .event-item:first-of-type { border-top: 1px solid rgba(255, 46, 26, 0.18); }
 .event-item:hover { background: rgba(255, 255, 255, 0.07); }
 .event-item.is-link:hover { background: rgba(0, 229, 255, 0.05); }
+
+.cal-cell.has-events { cursor: pointer; }
+.cal-cell.has-events:hover { background: rgba(0, 229, 255, 0.04); }
+
+.event-item.is-highlight {
+  border-color: var(--cyan) !important;
+  background: rgba(0, 229, 255, 0.08) !important;
+  transition: background 0.1s, border-color 0.1s;
+}
 
 .ev-item-scheduled { border-left: 3px solid var(--cyan); }
 .ev-item-uploaded  { border-left: 3px solid rgba(232, 232, 232, 0.35); }

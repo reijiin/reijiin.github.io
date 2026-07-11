@@ -5,7 +5,8 @@
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
     "status": "scheduled",
-    "caption": "誕生日(6/20)祝いの動画のフルバージョンです"
+    "caption": "誕生日(6/20)祝いの動画のフルバージョンです",
+    "thumbnail": "/images/thumb_kotori_v4.png"
   },
   {
     "date": "2026-07-12",
@@ -29,6 +30,7 @@
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
     "status": "scheduled",
-    "caption": "SAOアスナが草原で踊る動画です"
+    "caption": "SAOアスナが草原で踊る動画です",
+    "thumbnail": "/images/thumb_asuna_v6.png"
   }
 ]
