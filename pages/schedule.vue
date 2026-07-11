@@ -17,6 +17,16 @@
         <button class="month-btn" @click="nextMonth">▶</button>
       </div>
 
+      <!-- チャンネルフィルター -->
+      <div class="filter-bar">
+        <span class="filter-label">// CHANNEL</span>
+        <select v-model="selectedChannel" class="filter-select">
+          <option v-for="ch in channelOptions" :key="ch" :value="ch">
+            {{ ch === 'ALL' ? 'ALL CHANNELS' : ch }}
+          </option>
+        </select>
+      </div>
+
       <!-- 凡例 -->
       <div class="legend">
         <span class="legend-item"><span class="legend-dot dot-scheduled" />SCHEDULED</span>
@@ -30,7 +40,7 @@
         </div>
         <div class="cal-grid">
           <div
-            v-for="(cell, i) in calendarCells"
+            v-for="(cell, i) in filteredCalendarCells"
             :key="i"
             class="cal-cell"
             :class="{
@@ -61,7 +71,7 @@
       </div>
 
       <!-- 当月のイベントリスト -->
-      <div class="event-list" v-if="monthEvents.length">
+      <div class="event-list" v-if="filteredMonthEvents.length">
         <div class="divider">
           <span class="divider-line" />
           <span class="divider-label">THIS MONTH — 今月の予定</span>
@@ -69,7 +79,7 @@
         </div>
         <component
           :is="ev.url ? 'a' : 'div'"
-          v-for="ev in monthEvents"
+          v-for="ev in filteredMonthEvents"
           :key="ev.date + ev.title"
           :href="ev.url || undefined"
           target="_blank"
@@ -77,7 +87,6 @@
           class="event-item"
           :class="[ev.status === 'uploaded' ? 'ev-item-uploaded' : 'ev-item-scheduled', ev.url ? 'is-link' : '']"
         >
-          <!-- サムネ -->
           <div class="ev-thumb">
             <img
               v-if="ev.videoId"
@@ -86,14 +95,13 @@
             />
             <span v-else class="ev-thumb-icon">▶</span>
           </div>
-
           <span class="ev-date">{{ formatDate(ev.date) }}</span>
           <span class="ev-bar" />
           <div class="ev-info">
-  <span class="ev-title">{{ ev.title }}</span>
-  <span class="ev-channel">{{ ev.channel }}</span>
-  <span v-if="ev.caption" class="ev-caption">{{ ev.caption }}</span>
-</div>
+            <span class="ev-title">{{ ev.title }}</span>
+            <span class="ev-channel">{{ ev.channel }}</span>
+            <span v-if="ev.caption" class="ev-caption">{{ ev.caption }}</span>
+          </div>
           <span class="ev-status">{{ ev.status === 'uploaded' ? 'UPLOADED' : 'SCHEDULED' }}</span>
         </component>
       </div>
@@ -119,6 +127,7 @@ const schedule = scheduleData as Array<{
   status: 'scheduled' | 'uploaded'
   videoId?: string
   url?: string
+  caption?: string
 }>
 
 const dayLabels = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
@@ -138,6 +147,13 @@ function nextMonth() {
 }
 
 const todayStr = now.toISOString().slice(0, 10)
+
+// チャンネルフィルター
+const selectedChannel = ref('ALL')
+const channelOptions = computed(() => {
+  const names = [...new Set(schedule.map(e => e.channel))]
+  return ['ALL', ...names]
+})
 
 const calendarCells = computed(() => {
   const year = currentYear.value
@@ -162,12 +178,22 @@ const calendarCells = computed(() => {
   return cells
 })
 
-const monthEvents = computed(() => {
+const filteredCalendarCells = computed(() =>
+  calendarCells.value.map(cell => ({
+    ...cell,
+    events: cell.events.filter(e =>
+      selectedChannel.value === 'ALL' || e.channel === selectedChannel.value
+    )
+  }))
+)
+
+const filteredMonthEvents = computed(() => {
   const year = currentYear.value
   const month = currentMonth.value
   const prefix = `${year}-${String(month + 1).padStart(2, '0')}`
   return schedule
     .filter(e => e.date.startsWith(prefix))
+    .filter(e => selectedChannel.value === 'ALL' || e.channel === selectedChannel.value)
     .sort((a, b) => a.date.localeCompare(b.date))
 })
 
@@ -243,6 +269,42 @@ function formatDate(dateStr: string) {
 }
 
 .month-sep { color: var(--red); margin: 0 2px; }
+
+/* フィルター */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-label {
+  font-family: var(--font-en);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(232, 232, 232, 0.4);
+}
+
+.filter-select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: rgba(232, 232, 232, 0.8);
+  font-family: var(--font-en);
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-select:hover,
+.filter-select:focus { border-color: var(--cyan); }
+
+.filter-select option {
+  background: #0a0b0e;
+  color: #e8e8e8;
+}
 
 .legend {
   display: flex;
@@ -390,7 +452,6 @@ function formatDate(dateStr: string) {
 .ev-item-scheduled { border-left: 3px solid var(--cyan); }
 .ev-item-uploaded  { border-left: 3px solid rgba(232, 232, 232, 0.35); }
 
-/* サムネ */
 .ev-thumb {
   width: 72px;
   height: 40px;
@@ -403,16 +464,8 @@ function formatDate(dateStr: string) {
   justify-content: center;
 }
 
-.ev-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ev-thumb-icon {
-  font-size: 16px;
-  color: rgba(255, 46, 26, 0.25);
-}
+.ev-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.ev-thumb-icon { font-size: 16px; color: rgba(255, 46, 26, 0.25); }
 
 .ev-date {
   font-family: var(--font-en);
@@ -431,9 +484,15 @@ function formatDate(dateStr: string) {
 }
 
 .ev-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-
 .ev-title { font-size: 13px; color: rgba(232, 232, 232, 0.95); }
 .ev-channel { font-size: 11px; color: rgba(232, 232, 232, 0.6); }
+
+.ev-caption {
+  font-size: 11px;
+  color: rgba(232, 232, 232, 0.4);
+  line-height: 1.5;
+  margin-top: 2px;
+}
 
 .ev-status {
   font-family: var(--font-en);
@@ -465,13 +524,6 @@ function formatDate(dateStr: string) {
 .footer-logo { font-family: var(--font-en); font-size: 10px; color: rgba(224, 48, 32, 0.5); letter-spacing: 2px; }
 .footer-copy { font-size: 11px; color: rgba(232, 232, 232, 0.35); }
 .footer-id   { font-family: var(--font-en); font-size: 10px; color: rgba(224, 48, 32, 0.45); letter-spacing: 2px; }
-
-.ev-caption {
-  font-size: 11px;
-  color: rgba(232, 232, 232, 0.4);
-  line-height: 1.5;
-  margin-top: 2px;
-}
 
 @media (max-width: 640px) {
   .section { padding: 24px 16px 32px; }
