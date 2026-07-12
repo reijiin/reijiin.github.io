@@ -19,11 +19,19 @@
   },
   {
     "date": "2026-07-12",
-    "title": "？？？",
-    "channel": "？？？",
+    "title": "アスナ動画第2弾",
+    "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
     "status": "scheduled",
-    "caption": "？？？"
+    "caption": "アスナ動画第2弾です"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "新チャンネル動画",
+    "channel": "新チャンネル",
+    "channelId": "galaxy",
+    "status": "scheduled",
+    "caption": "新チャンネルの動画です。準備ができたら開設・投稿します。"
   },
   {
     "date": "2026-07-14",
@@ -40,5 +48,13 @@
     "channelId": "sakura",
     "status": "scheduled",
     "caption": "Dal Segnoの動画です"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "D.C.Ⅱ or D.C.4",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "D.C.Ⅱ か D.C.4の動画です。両方作成中ですが準備ができた方から投稿します。"
   }
 ]
