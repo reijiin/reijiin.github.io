@@ -114,7 +114,15 @@
             <span class="ev-channel">{{ ev.channel }}</span>
             <span v-if="ev.caption" class="ev-caption">{{ ev.caption }}</span>
           </div>
-          <span class="ev-status">{{ ev.status === 'uploaded' ? 'UPLOADED' : 'SCHEDULED' }}</span>
+          <a
+            v-if="ev.url"
+            :href="ev.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ev-yt-btn"
+            @click.stop
+          >YouTube ▶</a>
+          <span v-else class="ev-status">{{ ev.status === 'uploaded' ? 'UPLOADED' : 'SCHEDULED' }}</span>
         </component>
       </div>
       <p v-else class="no-events">// NO EVENTS THIS MONTH</p>
@@ -545,6 +553,24 @@ function scrollToDate(dateStr: string | null) {
 
 .ev-item-scheduled .ev-status { color: var(--cyan); text-shadow: 0 0 4px var(--cyan-glow); }
 .ev-item-uploaded  .ev-status { color: rgba(232, 232, 232, 0.45); }
+
+.ev-yt-btn {
+  font-family: var(--font-en);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  padding: 4px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-shadow: 0 0 6px var(--cyan-glow);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.ev-yt-btn:hover {
+  background: var(--cyan-dim);
+  box-shadow: 0 0 10px var(--cyan-glow);
+}
 
 .no-events {
   font-family: var(--font-en);

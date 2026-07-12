@@ -1,15 +1,32 @@
 [
   {
     "date": "2026-07-11",
+    "title": "【SAO】アスナ、草原で舞う",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "uploaded",
+    "caption": "SAOアスナが草原で踊る動画です",
+    "thumbnail": "/images/thumb_asuna_v6.png"
+  },
+  {
+    "date": "2026-07-12",
     "title": "白河ことり",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "誕生日(6/20)祝いの動画のフルバージョンです",
     "thumbnail": "/images/thumb_kotori_v4.png"
   },
   {
     "date": "2026-07-12",
+    "title": "？？？",
+    "channel": "？？？",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "？？？"
+  },
+  {
+    "date": "2026-07-14",
     "title": "瑠川さら",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
@@ -17,20 +34,11 @@
     "caption": "誕生日(7/7)祝いの動画のフルバージョンです"
   },
   {
-    "date": "2026-07-14",
+    "date": "2026-07-16",
     "title": "邑崎 遥月",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
     "status": "scheduled",
     "caption": "Dal Segnoの動画です"
-  },
-  {
-    "date": "2026-07-11",
-    "title": "【SAO】アスナ、草原で舞う",
-    "channel": "Asuna Kaleidoscope",
-    "channelId": "asuna",
-    "status": "scheduled",
-    "caption": "SAOアスナが草原で踊る動画です",
-    "thumbnail": "/images/thumb_asuna_v6.png"
   }
 ]
