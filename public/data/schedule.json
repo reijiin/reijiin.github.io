@@ -44,12 +44,20 @@
     "caption": "新チャンネルの動画です。準備ができたら開設・投稿します。"
   },
   {
+    "date": "2026-07-18",
+    "title": "アスナ動画第3弾",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "uploaded",
+    "caption": "アスナ動画第3弾です"
+  },
+  {
     "date": "2026-07-19",
-    "title": "邑崎 遥月",
-    "channel": "サクラの国の枯れない桜",
-    "channelId": "sakura",
+    "title": "新チャンネル動画2",
+    "channel": "新チャンネル",
+    "channelId": "galaxy",
     "status": "scheduled",
-    "caption": "Dal Segnoの動画です"
+    "caption": "新チャンネルの動画2です。準備ができたら開設・投稿します。"
   },
   {
     "date": "2026-07-19",
@@ -58,5 +66,13 @@
     "channelId": "sakura",
     "status": "scheduled",
     "caption": "D.C.Ⅱ か D.C.4の動画です。両方作成中ですが準備ができた方から投稿します。"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "邑崎 遥月",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "Dal Segnoの動画です"
   }
 ]

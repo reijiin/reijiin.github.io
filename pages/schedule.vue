@@ -151,7 +151,11 @@
             highlightDate === ev.date ? 'is-highlight' : '',
           ]"
         >
-          <div class="ev-thumb">
+          <div
+            class="ev-thumb"
+            :class="{ 'has-thumb': ev.thumbnail || ev.videoId }"
+            @click.stop="ev.thumbnail ? openModal(ev.thumbnail, ev.title) : ev.videoId ? openModal(`https://img.youtube.com/vi/${ev.videoId}/hqdefault.jpg`, ev.title) : null"
+          >
             <img v-if="ev.thumbnail" :src="ev.thumbnail" :alt="ev.title" />
             <img v-else-if="ev.videoId" :src="`https://img.youtube.com/vi/${ev.videoId}/hqdefault.jpg`" :alt="ev.title" />
             <span v-else class="ev-thumb-icon">▶</span>
@@ -169,6 +173,14 @@
       </div>
       <p v-else class="no-events">// NO EVENTS</p>
     </section>
+
+    <!-- サムネモーダル -->
+    <div v-if="modalSrc" class="modal-overlay" @click="closeModal">
+      <div class="modal-inner" @click.stop>
+        <img :src="modalSrc" :alt="modalAlt" class="modal-img" />
+        <button class="modal-close" @click="closeModal">✕</button>
+      </div>
+    </div>
 
     <footer class="footer">
       <span class="footer-logo">STUDIO REIJIIN · 零二院</span>
@@ -197,7 +209,7 @@ const dayLabels = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 const dowLabels = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 
 const now = new Date()
-const todayStr = now.toISOString().slice(0, 10)
+const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
 
 // 表示モード
 const viewMode = ref<'month' | 'week'>('month')
@@ -340,8 +352,21 @@ function formatDate(dateStr: string) {
 
 const highlightDate = ref('')
 
+// サムネモーダル
+const modalSrc = ref('')
+const modalAlt = ref('')
+
+function openModal(src: string, alt: string) {
+  modalSrc.value = src
+  modalAlt.value = alt
+}
+
+function closeModal() {
+  modalSrc.value = ''
+  modalAlt.value = ''
+}
+
 function scrollToDate(dateStr: string | null) {
-  if (!dateStr) return
   highlightDate.value = dateStr
   nextTick(() => {
     const el = document.getElementById(`event-${dateStr}`)
@@ -761,6 +786,17 @@ function scrollToDate(dateStr: string | null) {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ev-thumb.has-thumb {
+  cursor: zoom-in;
+}
+
+.ev-thumb.has-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+  z-index: 1;
 }
 
 .ev-thumb img { width: 100%; height: 100%; object-fit: cover; }
@@ -827,6 +863,54 @@ function scrollToDate(dateStr: string | null) {
   letter-spacing: 2px;
   padding: 24px 0;
 }
+
+/* モーダル */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+}
+
+.modal-img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background: var(--red);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--red-glow);
+  transition: background 0.2s;
+}
+
+.modal-close:hover { background: #c02010; }
 
 .footer {
   padding: 20px 32px;
