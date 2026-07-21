@@ -36,39 +36,64 @@
     "thumbnail": "/images/thumb_sara.png"
   },
   {
-    "date": "2026-07-18",
-    "title": "新チャンネル動画",
-    "channel": "新チャンネル",
-    "channelId": "galaxy",
-    "status": "scheduled",
-    "caption": "新チャンネルの動画です。準備ができたら開設・投稿します。"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "アスナ動画第3弾",
+    "date": "2026-07-20",
+    "title": "アスナ水着でダンス",
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
     "status": "uploaded",
-    "caption": "アスナ動画第3弾です"
+    "caption": "アスナ動画第3弾です",
+    "thumbnail": "/images/thumb_asuna_swim.jpeg"
   },
   {
-    "date": "2026-07-19",
-    "title": "新チャンネル動画2",
+    "date": "2026-07-22",
+    "title": "D.C.4",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "D.C.4の動画です。"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "新チャンネル動画1",
     "channel": "新チャンネル",
     "channelId": "galaxy",
+    "status": "scheduled",
+    "caption": "新チャンネルの動画1です。準備ができたら開設・投稿します。"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "新チャンネル動画2",
+    "channel": "新チャンネル",
+    "channelId": "trueroute",
     "status": "scheduled",
     "caption": "新チャンネルの動画2です。準備ができたら開設・投稿します。"
   },
   {
-    "date": "2026-07-19",
-    "title": "D.C.Ⅱ or D.C.4",
+    "date": "2026-07-24",
+    "title": "新チャンネル動画3",
+    "channel": "新チャンネル",
+    "channelId": "galaxy",
+    "status": "scheduled",
+    "caption": "新チャンネルの動画3です。準備ができたら開設・投稿します。"
+  },
+  {
+    "date": "2026-07-24",
+    "title": "新チャンネル動画4",
+    "channel": "新チャンネル",
+    "channelId": "trueroute",
+    "status": "scheduled",
+    "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
+  },
+  {
+    "date": "2026-07-25",
+    "title": "D.C.Ⅱ",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
     "status": "scheduled",
-    "caption": "D.C.Ⅱ か D.C.4の動画です。両方作成中ですが準備ができた方から投稿します。"
+    "caption": "D.C.Ⅱの動画です。"
   },
   {
-    "date": "2026-07-20",
+    "date": "????",
     "title": "邑崎 遥月",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",

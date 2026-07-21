@@ -45,6 +45,11 @@
           <span class="legend-dot" :class="showUploaded ? 'dot-uploaded-on' : 'dot-uploaded-off'" />
           UPLOADED
         </button>
+
+        <button class="toggle-uploaded-btn" :class="{ active: showUndated }" @click="showUndated = !showUndated">
+          <span class="legend-dot" :class="showUndated ? 'dot-scheduled' : 'dot-uploaded-off'" style="opacity:0.5" />
+          UNDATED
+        </button>
       </div>
 
       <!-- 凡例 -->
@@ -172,6 +177,46 @@
         </component>
       </div>
       <p v-else class="no-events">// NO EVENTS</p>
+
+      <!-- 日付未定 -->
+      <template v-if="undatedEvents.length && isCurrentPeriod && showUndated">
+        <div class="divider" style="margin-top: 32px;">
+          <span class="divider-line" />
+          <span class="divider-label">UNDATED — 日付未定</span>
+          <span class="divider-line" />
+        </div>
+        <div class="event-list">
+          <component
+            :is="ev.url ? 'a' : 'div'"
+            v-for="ev in undatedEvents"
+            :key="ev.title"
+            :href="ev.url || undefined"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="event-item ev-item-scheduled"
+            :class="ev.url ? 'is-link' : ''"
+          >
+            <div
+              class="ev-thumb"
+              :class="{ 'has-thumb': ev.thumbnail || ev.videoId }"
+              @click.stop="ev.thumbnail ? openModal(ev.thumbnail, ev.title) : ev.videoId ? openModal(`https://img.youtube.com/vi/${ev.videoId}/hqdefault.jpg`, ev.title) : null"
+            >
+              <img v-if="ev.thumbnail" :src="ev.thumbnail" :alt="ev.title" />
+              <img v-else-if="ev.videoId" :src="`https://img.youtube.com/vi/${ev.videoId}/hqdefault.jpg`" :alt="ev.title" />
+              <span v-else class="ev-thumb-icon">▶</span>
+            </div>
+            <span class="ev-date ev-date-unknown">????</span>
+            <span class="ev-bar" />
+            <div class="ev-info">
+              <span class="ev-title">{{ ev.title }}</span>
+              <span class="ev-channel">{{ ev.channel }}</span>
+              <span v-if="ev.caption" class="ev-caption">{{ ev.caption }}</span>
+            </div>
+            <a v-if="ev.url" :href="ev.url" target="_blank" rel="noopener noreferrer" class="ev-yt-btn" @click.stop>YouTube ▶</a>
+            <span v-else class="ev-status" style="color: rgba(232,232,232,0.3)">TBD</span>
+          </component>
+        </div>
+      </template>
     </section>
 
     <!-- サムネモーダル -->
@@ -268,13 +313,45 @@ function next() {
 const route = useRoute()
 const selectedChannel = ref('ALL')
 const showUploaded = ref(true)
+const showUndated = ref(true)
 
 onMounted(() => {
-  const q = route.query.channel
-  if (q && typeof q === 'string') {
-    const matched = schedule.find(e => e.channelId === q)
+  const q = route.query
+
+  // view mode
+  if (q.view === 'week') viewMode.value = 'week'
+  else if (q.view === 'month') viewMode.value = 'month'
+
+  // 特定月指定
+  if (q.year && q.month) {
+    const y = parseInt(q.year as string)
+    const m = parseInt(q.month as string) - 1
+    if (!isNaN(y) && !isNaN(m)) {
+      currentYear.value = y
+      currentMonth.value = m
+    }
+  }
+
+  // 特定週指定
+  if (q.date && typeof q.date === 'string') {
+    const d = new Date(q.date)
+    if (!isNaN(d.getTime())) {
+      weekStart.value = getWeekStart(d)
+    }
+  }
+
+  // チャンネル
+  if (q.channel && typeof q.channel === 'string') {
+    const matched = schedule.find(e => e.channelId === q.channel)
     if (matched) selectedChannel.value = matched.channel
   }
+
+  // ステータス
+  if (q.status === 'scheduled') showUploaded.value = false
+  else if (q.status === 'uploaded') showUploaded.value = true
+
+  // 日付未定
+  if (q.undated === 'hide') showUndated.value = false
 })
 
 const channelOptions = computed(() => {
@@ -301,7 +378,7 @@ const calendarCells = computed(() => {
   }
   for (let d = 1; d <= daysInMonth; d++) {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`
-    const events = schedule.filter(e => e.date === dateStr)
+    const events = schedule.filter(e => e.date === dateStr && e.date !== '????')
     cells.push({ day: d, dateStr, isToday: dateStr === todayStr, isPast: dateStr < todayStr, events })
   }
   return cells
@@ -344,6 +421,25 @@ const visibleListEvents = computed(() => {
   return filterEvents(schedule.filter(e => e.date.startsWith(prefix)))
     .sort((a, b) => a.date.localeCompare(b.date))
 })
+
+const isCurrentPeriod = computed(() => {
+  if (viewMode.value === 'month') {
+    return currentYear.value === now.getFullYear() && currentMonth.value === now.getMonth()
+  } else {
+    const weekEnd = addDays(weekStart.value, 6)
+    const todayDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    return weekEnd >= todayDate
+  }
+})
+
+// 日付未定（date === "????"）
+const undatedEvents = computed(() =>
+  schedule.filter(e =>
+    e.date === '????' &&
+    (selectedChannel.value === 'ALL' || e.channel === selectedChannel.value) &&
+    (showUploaded.value || e.status !== 'uploaded')
+  )
+)
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr)
@@ -809,6 +905,12 @@ function scrollToDate(dateStr: string | null) {
   color: var(--red);
   text-shadow: 0 0 8px var(--red-glow);
   min-width: 36px;
+}
+
+.ev-date-unknown {
+  color: rgba(232, 232, 232, 0.3);
+  text-shadow: none;
+  font-size: 11px;
 }
 
 .ev-bar {
