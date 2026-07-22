@@ -45,23 +45,25 @@
     "thumbnail": "/images/thumb_asuna_swim.jpeg"
   },
   {
-    "date": "2026-07-22",
-    "title": "D.C.4",
+    "date": "2026-07-23",
+    "title": "常坂ニ乃（水着）",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
     "status": "scheduled",
-    "caption": "D.C.4の動画です。"
+    "caption": "D.C.4の常坂ニ乃（水着）動画です。",
+    "thumbnail": "/images/th_nino.jpeg"
   },
   {
-    "date": "2026-07-22",
+    "date": "2026-07-23",
     "title": "新チャンネル動画1",
     "channel": "新チャンネル",
     "channelId": "galaxy",
     "status": "scheduled",
-    "caption": "新チャンネルの動画1です。準備ができたら開設・投稿します。"
+    "caption": "新チャンネルの動画1です。準備ができたら開設・投稿します。",
+    "thumbnail": "/images/th_shu.jpeg"
   },
   {
-    "date": "2026-07-22",
+    "date": "2026-07-23",
     "title": "新チャンネル動画2",
     "channel": "新チャンネル",
     "channelId": "trueroute",
