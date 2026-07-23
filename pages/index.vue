@@ -113,7 +113,7 @@ const schedule = scheduleData as Array<{
 
 const today = new Date().toISOString().slice(0, 10)
 const nextRelease = schedule
-  .filter(s => s.status === 'scheduled' && s.date >= today)
+  .filter(s => s.status === 'scheduled' && s.date !== '????' && s.date >= today)
   .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
 
 function formatDate(dateStr: string) {
