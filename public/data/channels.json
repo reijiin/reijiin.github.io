@@ -25,15 +25,15 @@
   },
   {
     "id": "galaxy",
-    "name": "？？？",
+    "name": "ギャラクシー・ガーリー・パラダイス",
     "desc": "2010年代以降の最新アニメを彩るヒロイン達のチャンネルです",
     "detail": "2010年代から最新トレンドまで、様々なアニメ作品に登場するヒロイン達のAI生成動画を投稿予定。",
-    "url": "",
-    "thumbnail": "",
+    "url": "https://www.youtube.com/@galaxygirlyparadise",
+    "thumbnail": "/images/output_utaha_4knoob.jpeg",
     "embedVideoId": "",
     "tags": ["アニメ", "2010年代", "2020年代"],
-    "status": "coming",
-    "label": "CH-03 · COMING SOON"
+    "status": "live",
+    "label": "CH-03 · LIVE"
   },
   {
     "id": "heroines",

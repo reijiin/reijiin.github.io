@@ -49,29 +49,29 @@
     "title": "常坂ニ乃（水着）",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "D.C.4の常坂ニ乃（水着）動画です。",
     "thumbnail": "/images/th_nino.jpeg"
   },
   {
     "date": "2026-07-23",
-    "title": "新チャンネル動画1",
-    "channel": "新チャンネル",
+    "title": "霞ヶ丘詩羽",
+    "channel": "ギャラクシー・ガーリー・パラダイス",
     "channelId": "galaxy",
-    "status": "scheduled",
-    "caption": "新チャンネルの動画1です。準備ができたら開設・投稿します。",
-    "thumbnail": "/images/th_shu.jpeg"
+    "status": "uploaded",
+    "caption": "霞ヶ丘詩羽の動画です。君が望む永遠の主題歌Rumbling heartsカバーです。",
+    "thumbnail": "/images/output_utaha_4k.jpg"
   },
   {
-    "date": "2026-07-23",
+    "date": "2026-07-24",
     "title": "新チャンネル動画2",
     "channel": "新チャンネル",
     "channelId": "trueroute",
     "status": "scheduled",
-    "caption": "新チャンネルの動画2です。準備ができたら開設・投稿します。"
+    "caption": "/images/th_shu.jpeg"
   },
   {
-    "date": "2026-07-24",
+    "date": "2026-07-25",
     "title": "新チャンネル動画3",
     "channel": "新チャンネル",
     "channelId": "galaxy",
@@ -79,7 +79,7 @@
     "caption": "新チャンネルの動画3です。準備ができたら開設・投稿します。"
   },
   {
-    "date": "2026-07-24",
+    "date": "2026-07-25",
     "title": "新チャンネル動画4",
     "channel": "新チャンネル",
     "channelId": "trueroute",
