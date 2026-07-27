@@ -63,15 +63,16 @@
     "thumbnail": "/images/output_utaha_4k.jpg"
   },
   {
-    "date": "2026-07-24",
-    "title": "新チャンネル動画2",
-    "channel": "新チャンネル",
+    "date": "2026-07-27",
+    "title": "SHUFFLE!",
+    "channel": "トゥルーエンド・メモリーズ",
     "channelId": "trueroute",
-    "status": "scheduled",
-    "caption": "/images/th_shu.jpeg"
+    "status": "uploaded",
+    "caption": "SHUFFLE!ヒロインズの動画です",
+    "thumbnail": "/images/output_shuffle_v2_4k.jpg"
   },
   {
-    "date": "2026-07-25",
+    "date": "2026-07-27",
     "title": "新チャンネル動画3",
     "channel": "新チャンネル",
     "channelId": "galaxy",
@@ -79,7 +80,7 @@
     "caption": "新チャンネルの動画3です。準備ができたら開設・投稿します。"
   },
   {
-    "date": "2026-07-25",
+    "date": "2026-07-28",
     "title": "新チャンネル動画4",
     "channel": "新チャンネル",
     "channelId": "trueroute",
@@ -87,7 +88,7 @@
     "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
   },
   {
-    "date": "2026-07-25",
+    "date": "2026-07-28",
     "title": "【D.C.Ⅱ】",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
