@@ -73,35 +73,39 @@
   },
   {
     "date": "2026-07-28",
-    "title": "新チャンネルの動画3",
-    "channel": "ギャラクシー・ガーリー・パラダイス",
-    "channelId": "galaxy",
-    "status": "uploaded",
-    "caption": "新チャンネルの動画3です。"
-  },
-  {
-    "date": "2026-07-28",
-    "title": "【D.C.Ⅱ】",
+    "title": "【D.C.Ⅱ】ななか＆小恋",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
     "status": "uploaded",
-    "caption": "D.C.Ⅱの動画です。"
+    "caption": "D.C.Ⅱのななか＆小恋の動画です。",
+    "thumbnail": "/images/output_dc2_v2_4k.jpg"
   },
   {
-    "date": "2026-07-29",
-    "title": "新チャンネル動画4",
-    "channel": "新チャンネル",
-    "channelId": "trueroute",
+    "date": "2026-08-05",
+    "title": "【たんもし】シエスタ",
+    "channel": "ギャラクシー・ガーリー・パラダイス",
+    "channelId": "galaxy",
     "status": "uploaded",
-    "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
+    "caption": "たんもしのシエスタの動画です",
+    "thumbnail": "/images/output_siesta_4k.jpg"
   },
    {
-    "date": "2026-07-29",
-    "title": "新チャンネル動画4",
-    "channel": "新チャンネル",
-    "channelId": "trueroute",
+    "date": "2026-07-31",
+    "title": "【SAO】アスナ教室でダンス",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
     "status": "uploaded",
-    "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
+    "caption": "アスナ動画第4弾です",
+    "thumbnail": "/images/output_asuna_v2_4k.jpg"
+  },
+  {
+    "date": "2026-08-04",
+    "title": "【D.C.Ⅱ】朝倉音姫＆由夢",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "D.C.Ⅱの朝倉音姫＆由夢の動画です。",
+    "thumbnail": "/images/output_dc2_otome_4k.jpg"
   },
    {
     "date": "2026-08-04",
@@ -117,6 +121,7 @@
     "title": "【水夏】白河さやか",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
+     "status": "uploaded",
     "caption": "水夏の白河さやかの動画です",
     "thumbnail": "/images/output_sayaka_4k.jpg"
   },
