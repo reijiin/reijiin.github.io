@@ -76,7 +76,7 @@
     "title": "新チャンネルの動画3",
     "channel": "ギャラクシー・ガーリー・パラダイス",
     "channelId": "galaxy",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "新チャンネルの動画3です。"
   },
   {
@@ -84,7 +84,7 @@
     "title": "【D.C.Ⅱ】",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "D.C.Ⅱの動画です。"
   },
   {
@@ -92,15 +92,41 @@
     "title": "新チャンネル動画4",
     "channel": "新チャンネル",
     "channelId": "trueroute",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
   },
-  {
-    "date": "????",
-    "title": "【D.S.】邑崎 遥月",
+   {
+    "date": "2026-07-29",
+    "title": "新チャンネル動画4",
+    "channel": "新チャンネル",
+    "channelId": "trueroute",
+    "status": "uploaded",
+    "caption": "新チャンネルの動画4です。準備ができたら開設・投稿します。"
+  },
+   {
+    "date": "2026-08-04",
+    "title": "【アイドルデスゲームTV】ポジティブ絶対値",
+    "channel": "トゥルーエンド・メモリーズ",
+    "channelId": "trueroute",
+    "status": "uploaded",
+    "caption": "【アイドルデスゲームTV】のポジティブ絶対値の動画です",
+    "thumbnail": "/images/output_idol_4k.jpg"
+  },
+   {
+    "date": "2026-08-14",
+    "title": "【水夏】白河さやか",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
-    "caption": "Dal Segnoの動画です"
+    "caption": "水夏の白河さやかの動画です",
+    "thumbnail": "/images/output_sayaka_4k.jpg"
+  },
+   {
+    "date": "2026-08-17",
+    "title": "【まどマギ】ほむらちゃん",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "uploaded",
+    "caption": "まどマギのほむらちゃんの動画です",
+    "thumbnail": "/images/output_homura_4k.jpg"
   }
 ]
