@@ -11,15 +11,15 @@
     "status": "live",
     "label": "CH-01 · LIVE"
   },
-    {
-    "id": "asuna",
-    "name": "Asuna Kaleidoscope",
-    "desc": "SAOのアスナ(結城明日奈)メインの特化型のチャンネルです",
-    "detail": "SAOのアスナをテーマにしたAI生成動画を投稿しています。",
-    "url": "https://www.youtube.com/@AsunaKaleidoscope",
-    "thumbnail": "/images/asuna.png",
+  {
+    "id": "heisei",
+    "name": "平成アニメヒロインReplay",
+    "desc": "平成アニメのヒロイン達をリプレイするチャンネルです",
+    "detail": "1990年代から2010年頃までの、青春時代を彩ったアニメのヒロイン達のAI生成動画を投稿予定。",
+    "url": "https://www.youtube.com/channel/UCjcjWtPK9TyQkD05yU7wTAQ",
+    "thumbnail": "/images/heisei.jpg",
     "embedVideoId": "",
-    "tags": ["SAO", "アスナ", "結城明日奈"],
+    "tags": ["アニメ", "2010年代", "90年代", "平成アニメ"],
     "status": "live",
     "label": "CH-02 · LIVE"
   },
@@ -48,6 +48,18 @@
     "label": "CH-04 · LIVE"
   },
    {
+    "id": "asuna",
+    "name": "Asuna Kaleidoscope",
+    "desc": "SAOのアスナ(結城明日奈)メインの特化型のチャンネルです",
+    "detail": "SAOのアスナをテーマにしたAI生成動画を投稿しています。",
+    "url": "https://www.youtube.com/@AsunaKaleidoscope",
+    "thumbnail": "/images/asuna.png",
+    "embedVideoId": "",
+    "tags": ["SAO", "アスナ", "結城明日奈"],
+    "status": "live",
+    "label": "CH-05 · LIVE"
+  },
+   {
     "id": "heroines",
     "name": "???",
     "desc": "1990〜2000年代の懐かしの名作アニメ・ゲームのヒロイン達をリプレイするチャンネルです",
@@ -57,6 +69,6 @@
     "embedVideoId": "",
     "tags": ["レトロゲーム", "レトロアニメ", "90年代", "00年代"],
     "status": "comming",
-    "label": "CH-05 · COMMIMG SOON"
+    "label": "CH-06 · COMMIMG SOON"
   }
 ]
