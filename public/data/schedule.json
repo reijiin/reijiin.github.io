@@ -81,7 +81,7 @@
     "thumbnail": "/images/output_dc2_v2_4k.jpg"
   },
   {
-    "date": "2026-08-05",
+    "date": "2026-07-29",
     "title": "【たんもし】シエスタ",
     "channel": "ギャラクシー・ガーリー・パラダイス",
     "channelId": "galaxy",
@@ -133,5 +133,33 @@
     "status": "uploaded",
     "caption": "まどマギのほむらちゃんの動画です",
     "thumbnail": "/images/output_homura_4k.jpg"
+  }
+  ,
+   {
+    "date": "2026-08-23",
+    "title": "【D.C.】白河ことり 浴衣",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "白河ことり 浴衣 花火の動画です",
+    "thumbnail": "/images/koktori_4k.jpeg"
+  },
+   {
+    "date": "2026-08-28",
+    "title": "【SAO】アスナ 乱れ雪月花",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "アスナ乱れ雪月花の動画です",
+    "thumbnail": "/images/asuna_sword1_4k.jpeg"
+  },
+   {
+    "date": "2026-08-28",
+    "title": "【オトメ*ドメイン】飛鳥 湊",
+    "channel": "トゥルーエンド・メモリーズ",
+    "channelId": "trueroute",
+    "status": "scheduled",
+    "caption": "【オトメ*ドメイン】飛鳥 湊の動画です",
+    "thumbnail": "/images/otomed_4k.jpeg"
   }
 ]
