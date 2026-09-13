@@ -56,7 +56,7 @@
   {
     "date": "2026-07-23",
     "title": "霞ヶ丘詩羽",
-    "channel": "ギャラクシー・ガーリー・パラダイス",
+    "channel": "令和ヒロイン・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "霞ヶ丘詩羽の動画です。君が望む永遠の主題歌Rumbling heartsカバーです。",
@@ -83,7 +83,7 @@
   {
     "date": "2026-07-29",
     "title": "【たんもし】シエスタ",
-    "channel": "ギャラクシー・ガーリー・パラダイス",
+    "channel": "令和ヒロイン・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "たんもしのシエスタの動画です",
@@ -133,8 +133,7 @@
     "status": "uploaded",
     "caption": "まどマギのほむらちゃんの動画です",
     "thumbnail": "/images/output_homura_4k.jpg"
-  }
-  ,
+  },
    {
     "date": "2026-08-23",
     "title": "【D.C.】白河ことり 浴衣",
@@ -160,6 +159,59 @@
     "channelId": "trueroute",
     "status": "scheduled",
     "caption": "【オトメ*ドメイン】飛鳥 湊の動画です",
-    "thumbnail": "/images/otomed_4k.jpeg"
+    "thumbnail": "/images/otomed3_4k.jpeg"
+  },
+   {
+    "date": "2026-09-01",
+    "title": "【エヴァ】アスカ プログレッシブ・ナイフ・ダンス",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "uploaded",
+    "caption": "エヴァのアスカの動画です",
+    "thumbnail": "/images/asuka_4k.jpeg"
+  },
+   {
+    "date": "2026-09-05",
+    "title": "【D.C.】芳乃 さくら生誕祭",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "芳乃 さくら生誕祭の動画です",
+    "thumbnail": "/images/sakura_4k.jpeg"
+  },
+   {
+    "date": "2026-09-07",
+    "title": "【SAO】アスナ クリスタルダンス",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "uploaded",
+    "caption": "アスナクリスタルダンスの動画です",
+    "thumbnail": "/images/axuna_cry1_4k.jpeg"
+  },
+   {
+    "date": "2026-09-09",
+    "title": "【ロシデレ】アーニャ＆有希",
+    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channelId": "galaxy",
+    "status": "uploaded",
+    "caption": "【ロシデレ】アーニャ＆有希の動画です",
+    "thumbnail": "/images/rus2_4k.jpeg"
+  } ,
+   {
+    "date": "2026-09-13",
+    "title": "【D.C.Ⅱ】SSP寿司パーティ！",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "SSP寿司パーティの動画です",
+    "thumbnail": "/images/ssp_4k.jpeg"
+  },
+   {
+    "date": "2026-09-13",
+    "title": "【ときメモ２】",
+    "channel": "トゥルーエンド・メモリーズ",
+    "channelId": "trueroute",
+    "status": "scheduled",
+    "caption": "ときメモ２の動画です"
   }
 ]
