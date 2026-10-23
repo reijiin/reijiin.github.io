@@ -148,7 +148,7 @@
     "title": "【SAO】アスナ 乱れ雪月花",
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "アスナ乱れ雪月花の動画です",
     "thumbnail": "/images/asuna_sword1_4k.jpeg"
   },
@@ -157,7 +157,7 @@
     "title": "【オトメ*ドメイン】飛鳥 湊",
     "channel": "トゥルーエンド・メモリーズ",
     "channelId": "trueroute",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "【オトメ*ドメイン】飛鳥 湊の動画です",
     "thumbnail": "/images/otomed3_4k.jpeg"
   },
@@ -202,16 +202,122 @@
     "title": "【D.C.Ⅱ】SSP寿司パーティ！",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "SSP寿司パーティの動画です",
     "thumbnail": "/images/ssp_4k.jpeg"
   },
    {
-    "date": "2026-09-13",
+    "date": "2026-09-14",
+    "title": "【SAO】アスナ 教室でくつろぐ",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "uploaded",
+    "caption": "アスナ教室でくつろぐの動画です",
+    "thumbnail": "/images/asuna_class2_4k.jpeg"
+  },{
+    "date": "2026-09-20",
+    "title": "【D.C.Ⅲ】陽ノ本葵",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "陽ノ本葵の動画です",
+    "thumbnail": "/images/aoi_4k.jpeg"
+  },
+    {
+    "date": "2026-09-25",
+    "title": "【SAO】アスナ ウェディングドレス",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "uploaded",
+    "caption": "アスナ ウェディングドレスの動画です",
+    "thumbnail": "/images/asunawed_4k.jpeg"
+  },{
+    "date": "2026-10-04",
+    "title": "【D.C.4】鷺澤 有里咲 ",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "鷺澤 有里咲の動画です",
+    "thumbnail": "/images/arisu_4k.jpeg"
+  },{
+    "date": "2026-10-12",
+    "title": "【D.C.Ⅱ】朝倉音姫 巫女",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "朝倉音姫 巫女の動画です",
+    "thumbnail": "/images/otome_miko2.jpeg"
+  },
+   {
+    "date": "2026-10-13",
     "title": "【ときメモ２】",
     "channel": "トゥルーエンド・メモリーズ",
     "channelId": "trueroute",
+    "status": "uploaded",
+    "caption": "ときメモ２の動画です",
+    "thumbnail": "/images/toki2_4k.jpeg"
+  },
+  {
+    "date": "2026-10-18",
+    "title": "【かぐや様は告らせたい】ヒロインズ",
+    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channelId": "galaxy",
+    "status": "uploaded",
+    "caption": "【かぐや様は告らせたい】ヒロインズの動画です",
+    "thumbnail": "/images/kaguya_4k.jpeg"
+  },
+  {
+    "date": "2026-10-21",
+    "title": "【D.C.】朝倉音夢(兄さんのYシャツ)",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "uploaded",
+    "caption": "D.C.の朝倉音夢(兄さんのYシャツ)の動画です。",
+    "thumbnail": "/images/nemu_y_4k.jpeg"
+  },
+  {
+    "date": "2026-10-22",
+    "title": "【魔女の旅々】イレイナ",
+    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channelId": "galaxy",
+    "status": "uploaded",
+    "caption": "【魔女の旅々】イレイナの動画です",
+    "thumbnail": "/images/majo2_4k.jpeg"
+  },
+  {
+    "date": "2026-10-22",
+    "title": "【9 nine】",
+    "channel": "トゥルーエンド・メモリーズ",
+    "channelId": "trueroute",
+    "status": "uploaded",
+    "caption": "9 nineの動画です",
+    "thumbnail": "/images/miyako_4k.jpeg"
+  },
+  {
+    "date": "2026-10-22",
+    "title": "【ギャラクシーエンジェル】エンジェル隊",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "uploaded",
+    "caption": "【ギャラクシーエンジェル】エンジェル隊のアスカの動画です",
+    "thumbnail": "/images/ga_4k.jpeg"
+  },
+  {
+    "date": "2026-10-23",
+    "title": "【D.C.】芳乃 さくらホウキダンス",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
     "status": "scheduled",
-    "caption": "ときメモ２の動画です"
+    "caption": "芳乃 さくらホウキダンスの動画です",
+    "thumbnail": "/images/sakura_houki_4k.jpeg"
+  },
+    {
+    "date": "2026-10-23",
+    "title": "【SAO】アスナ オンステージ",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "アスナ オンステージの動画です",
+    "thumbnail": "/images/asuna_stage_4k.jpeg"
   }
 ]
