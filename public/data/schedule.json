@@ -56,7 +56,7 @@
   {
     "date": "2026-07-23",
     "title": "霞ヶ丘詩羽",
-    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "霞ヶ丘詩羽の動画です。君が望む永遠の主題歌Rumbling heartsカバーです。",
@@ -83,7 +83,7 @@
   {
     "date": "2026-07-29",
     "title": "【たんもし】シエスタ",
-    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "たんもしのシエスタの動画です",
@@ -191,7 +191,7 @@
    {
     "date": "2026-09-09",
     "title": "【ロシデレ】アーニャ＆有希",
-    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "【ロシデレ】アーニャ＆有希の動画です",
@@ -260,7 +260,7 @@
   {
     "date": "2026-10-18",
     "title": "【かぐや様は告らせたい】ヒロインズ",
-    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "【かぐや様は告らせたい】ヒロインズの動画です",
@@ -278,7 +278,7 @@
   {
     "date": "2026-10-22",
     "title": "【魔女の旅々】イレイナ",
-    "channel": "令和ヒロイン・ガーリー・パラダイス",
+    "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "uploaded",
     "caption": "【魔女の旅々】イレイナの動画です",
@@ -286,11 +286,11 @@
   },
   {
     "date": "2026-10-22",
-    "title": "【9 nine】",
+    "title": "【9-nine-】九條都",
     "channel": "トゥルーエンド・メモリーズ",
     "channelId": "trueroute",
     "status": "uploaded",
-    "caption": "9 nineの動画です",
+    "caption": "9-nine- 九條都の動画です",
     "thumbnail": "/images/miyako_4k.jpeg"
   },
   {
@@ -299,7 +299,7 @@
     "channel": "平成アニメヒロインReplay",
     "channelId": "heisei",
     "status": "uploaded",
-    "caption": "【ギャラクシーエンジェル】エンジェル隊のアスカの動画です",
+    "caption": "【ギャラクシーエンジェル】エンジェル隊の動画です",
     "thumbnail": "/images/ga_4k.jpeg"
   },
   {
@@ -307,7 +307,7 @@
     "title": "【D.C.】芳乃 さくらホウキダンス",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "芳乃 さくらホウキダンスの動画です",
     "thumbnail": "/images/sakura_houki_4k.jpeg"
   },
@@ -316,8 +316,26 @@
     "title": "【SAO】アスナ オンステージ",
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "アスナ オンステージの動画です",
     "thumbnail": "/images/asuna_stage_4k.jpeg"
+  },
+  {
+    "date": "2026-10-25",
+    "title": "キュアアルカナ・シャドウ",
+    "channel": "令和アニメ・ガーリー・パラダイス",
+    "channelId": "galaxy",
+    "status": "uploaded",
+    "caption": "キュアアルカナ・シャドウの動画です",
+    "thumbnail": "/images/arukana2_4k.jpeg"
+  },
+  {
+    "date": "2026-10-26",
+    "title": "【ハヤテのごとく！】ヒナギク",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "scheduled",
+    "caption": "【ハヤテのごとく！】ヒナギクの動画です",
+    "thumbnail": "/images/hinagiku_4k.jpeg"
   }
 ]
