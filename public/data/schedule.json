@@ -330,12 +330,21 @@
     "thumbnail": "/images/arukana2_4k.jpeg"
   },
   {
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "title": "【ハヤテのごとく！】ヒナギク",
     "channel": "平成アニメヒロインReplay",
     "channelId": "heisei",
     "status": "scheduled",
     "caption": "【ハヤテのごとく！】ヒナギクの動画です",
     "thumbnail": "/images/hinagiku_4k.jpeg"
+  },
+  {
+    "date": "2026-10-28",
+    "title": "【よう実】堀北鈴音 ",
+    "channel": "令和アニメ・ガーリー・パラダイス",
+    "channelId": "galaxy",
+    "status": "scheduled",
+    "caption": "『ようこそ実力至上主義の教室へ』堀北鈴音の動画です",
+    "thumbnail": "/images/suzune_4k.jpeg"
   }
 ]
