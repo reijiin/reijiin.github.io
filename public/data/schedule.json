@@ -354,10 +354,10 @@
     "channelId": "sakura",
     "status": "uploaded",
     "caption": "D.C.Retuneの一周年記念動画の動画です",
-    "thumbnail": "/images/dc3kara1_4k.jpeg"
+    "thumbnail": "/images/retune_4k.jpeg"
   },
     {
-    "date": "2026-10-23",
+    "date": "2026-10-31",
     "title": "【SAO】アスナ カラオケデート",
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
@@ -372,6 +372,6 @@
     "channelId": "sakura",
     "status": "scheduled",
     "caption": "森園立夏のカラオケデートの動画です",
-    "thumbnail": "/images/retune_4k.jpeg"
+    "thumbnail": "/images/dc3kara1_4k.jpeg"
   }
 ]
