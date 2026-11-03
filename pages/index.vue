@@ -11,6 +11,8 @@
         <span class="next-date">{{ formatDate(nextRelease.date) }}</span>
         <span class="next-sep">·</span>
         <span class="next-channel">{{ nextRelease.channel }}</span>
+        <span class="next-sep">·</span>
+        <span class="next-title" :title="nextRelease.title">{{ nextRelease.title }}</span>
       </template>
       <template v-else>
         <span class="next-label">// NO UPCOMING RELEASES</span>
@@ -90,7 +92,7 @@
 import channelsData from '~/public/data/channels.json'
 import scheduleData from '~/public/data/schedule.json'
 
-const channels = channelsData as Array<{
+type Channel = {
   id: string
   name: string
   desc: string
@@ -98,7 +100,13 @@ const channels = channelsData as Array<{
   thumbnail: string
   status: 'live' | 'coming'
   label: string
-}>
+  topSortId?: number
+  channelSortId?: number
+}
+
+// トップページは topSortId 順(未設定は末尾)
+const channels = [...(channelsData as Channel[])]
+  .sort((a, b) => (a.topSortId ?? 999) - (b.topSortId ?? 999))
 
 const schedule = scheduleData as Array<{
   date: string
@@ -181,6 +189,17 @@ function formatDate(dateStr: string) {
 .next-channel {
   font-size: 11px;
   color: rgba(232, 232, 232, 0.5);
+  white-space: nowrap;
+}
+
+.next-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  color: rgba(232, 232, 232, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Divider */
@@ -423,6 +442,7 @@ function formatDate(dateStr: string) {
 
 @media (max-width: 640px) {
   .top-bar { padding: 8px 16px; flex-wrap: wrap; gap: 8px; }
+  .next-title { flex-basis: 100%; white-space: normal; }
   .section, .divider, .footer { padding-left: 16px; padding-right: 16px; }
   .about-inner { flex-direction: column; gap: 20px; }
   .about-deco { display: none; }

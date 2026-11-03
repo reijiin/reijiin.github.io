@@ -60,7 +60,7 @@
 <script setup lang="ts">
 import channelsData from '~/public/data/channels.json'
 
-const channels = channelsData as Array<{
+type Channel = {
   id: string
   name: string
   desc: string
@@ -71,7 +71,13 @@ const channels = channelsData as Array<{
   tags: string[]
   status: 'live' | 'coming'
   label: string
-}>
+  topSortId?: number
+  channelSortId?: number
+}
+
+// チャンネル一覧は channelSortId 順(未設定は末尾)
+const channels = [...(channelsData as Channel[])]
+  .sort((a, b) => (a.channelSortId ?? 999) - (b.channelSortId ?? 999))
 
 const liveChannels = channels.filter(c => c.status === 'live')
 </script>

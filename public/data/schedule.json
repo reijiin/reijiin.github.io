@@ -364,6 +364,15 @@
     "status": "uploaded",
     "caption": "アスナ カラオケデートの動画です",
     "thumbnail": "/images/asuna_kara1_4k.jpeg"
+  },
+  {
+    "date": "2026-10-31",
+    "title": "【ずっと前から女子でした】風間星名",
+    "channel": "トゥルーエンド・メモリーズ",
+    "channelId": "trueroute",
+    "status": "uploaded",
+    "caption": "風間星名の動画です",
+    "thumbnail": "/images/sena_4k-2.jpeg"
   }
   ,{
     "date": "2026-11-02",
@@ -373,5 +382,22 @@
     "status": "scheduled",
     "caption": "森園立夏のカラオケデートの動画です",
     "thumbnail": "/images/dc3kara1_4k.jpeg"
+  },
+  {
+    "date": "2026-11-03",
+    "title": "【ハヤテのごとく！】ヒナギク カラオケデート",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "uploaded",
+    "caption": "【ハヤテのごとく！】ヒナギクのカラオケデートの動画です",
+    "thumbnail": "/images/hinagiku_kara_4k.jpeg"
+  },{
+    "date": "2026-11-04",
+    "title": "【遊戯王】ブラック・マジシャン・ガール DuelDiskDance",
+    "channel": "Duel Disk Dance",
+    "channelId": "duel",
+    "status": "uploaded",
+    "caption": "ブラック・マジシャン・ガールのデュエル・ディスク・ダンスの動画です",
+    "thumbnail": "/images/bmg1_4k.jpeg"
   }
 ]

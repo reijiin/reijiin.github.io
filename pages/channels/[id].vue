@@ -79,6 +79,8 @@ const channels = channelsData as Array<{
   tags: string[]
   status: 'live' | 'coming'
   label: string
+  topSortId?: number
+  channelSortId?: number
 }>
 
 const channel = channels.find(c => c.id === route.params.id && c.status === 'live') ?? null

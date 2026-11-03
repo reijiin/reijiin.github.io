@@ -7,9 +7,15 @@
     "url": "https://www.youtube.com/@sakuranokuni_archives",
     "thumbnail": "/images/retune_4k.jpeg",
     "embedVideoId": "",
-    "tags": ["ダカーポ", "ギャルゲー", "CIRCUS"],
+    "tags": [
+      "ダカーポ",
+      "ギャルゲー",
+      "CIRCUS"
+    ],
     "status": "live",
-    "label": "CH-01 · LIVE"
+    "label": "CH-01 · LIVE",
+    "topSortId": 2,
+    "channelSortId": 2
   },
   {
     "id": "heisei",
@@ -17,11 +23,18 @@
     "desc": "平成アニメのヒロイン達をリプレイするチャンネルです",
     "detail": "1990年代から2010年頃までの、青春時代を彩ったアニメのヒロイン達のAI生成動画を投稿予定。",
     "url": "https://www.youtube.com/channel/UCjcjWtPK9TyQkD05yU7wTAQ",
-    "thumbnail": "/images/hinagiku_4k.jpeg",
+    "thumbnail": "/images/hinagiku_kara_4k.jpeg",
     "embedVideoId": "",
-    "tags": ["アニメ", "2010年代", "90年代", "平成アニメ"],
+    "tags": [
+      "アニメ",
+      "2010年代",
+      "90年代",
+      "平成アニメ"
+    ],
     "status": "live",
-    "label": "CH-02 · LIVE"
+    "label": "CH-02 · LIVE",
+    "topSortId": 3,
+    "channelSortId": 3
   },
   {
     "id": "galaxy",
@@ -31,9 +44,15 @@
     "url": "https://www.youtube.com/@galaxygirlyparadise",
     "thumbnail": "/images/majo2_4k.jpeg",
     "embedVideoId": "",
-    "tags": ["アニメ", "2010年代", "2020年代"],
+    "tags": [
+      "アニメ",
+      "2010年代",
+      "2020年代"
+    ],
     "status": "live",
-    "label": "CH-03 · LIVE"
+    "label": "CH-03 · LIVE",
+    "topSortId": 4,
+    "channelSortId": 4
   },
   {
     "id": "trueroute",
@@ -43,11 +62,15 @@
     "url": "https://www.youtube.com/@trueendmemories",
     "thumbnail": "/images/sena_4k-2.jpeg",
     "embedVideoId": "",
-    "tags": ["ギャルゲー"],
+    "tags": [
+      "ギャルゲー"
+    ],
     "status": "live",
-    "label": "CH-04 · LIVE"
+    "label": "CH-04 · LIVE",
+    "topSortId": 5,
+    "channelSortId": 5
   },
-   {
+  {
     "id": "asuna",
     "name": "Asuna Kaleidoscope",
     "desc": "SAOのアスナ(結城明日奈)メインの特化型のチャンネルです",
@@ -55,20 +78,51 @@
     "url": "https://www.youtube.com/@AsunaKaleidoscope",
     "thumbnail": "/images/asuna_stage_4k.jpeg",
     "embedVideoId": "",
-    "tags": ["SAO", "アスナ", "結城明日奈"],
+    "tags": [
+      "SAO",
+      "アスナ",
+      "結城明日奈"
+    ],
     "status": "live",
-    "label": "CH-05 · LIVE"
+    "label": "CH-05 · LIVE",
+    "topSortId": 6,
+    "channelSortId": 6
   },
-   {
+  {
+    "id": "duel",
+    "name": "Duel Disk Dance",
+    "desc": "遊戯王のデュエル・ディスク・ダンスのチャンネルです",
+    "detail": "遊戯王のデュエル・ディスクをテーマにしたAI生成動画を投稿しています。",
+    "url": "https://www.youtube.com/@DuelDiskDance",
+    "thumbnail": "/images/bmg1_4k.jpeg",
+    "embedVideoId": "",
+    "tags": [
+      "遊戯王",
+      "ブラック・マジシャン・ガール",
+      "デュエルディスク"
+    ],
+    "status": "live",
+    "label": "CH-06 · LIVE",
+    "topSortId": 1,
+    "channelSortId": 1
+  },
+  {
     "id": "heroines",
     "name": "???",
-    "desc": "1990〜2000年代の懐かしの名作アニメ・ゲームのヒロイン達をリプレイするチャンネルです",
+    "desc": "ゲームのヒロイン達をリプレイするチャンネルです",
     "detail": "1990年代から2009年頃までの、青春時代を彩ったアニメやレトロゲームのヒロイン達のAI生成動画を投稿予定。",
     "url": "",
     "thumbnail": "",
     "embedVideoId": "",
-    "tags": ["レトロゲーム", "レトロアニメ", "90年代", "00年代"],
-    "status": "comming",
-    "label": "CH-06 · COMMIMG SOON"
+    "tags": [
+      "レトロゲーム",
+      "レトロアニメ",
+      "90年代",
+      "00年代"
+    ],
+    "status": "coming",
+    "label": "CH-07 · COMING SOON",
+    "topSortId": 7,
+    "channelSortId": 7
   }
 ]
