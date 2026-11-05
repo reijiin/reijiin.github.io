@@ -659,7 +659,7 @@ function scrollToDate(dateStr: string | null) {
 
 .cal-header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   border-bottom: 1px solid rgba(255, 46, 26, 0.25);
   background: rgba(255, 46, 26, 0.06);
 }
@@ -673,9 +673,11 @@ function scrollToDate(dateStr: string | null) {
   padding: 10px 0;
 }
 
-.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+.cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
 
 .cal-cell {
+  min-width: 0;
+  overflow: hidden;
   min-height: 80px;
   border-right: 1px solid rgba(255, 46, 26, 0.15);
   border-bottom: 1px solid rgba(255, 46, 26, 0.15);
@@ -708,7 +710,7 @@ function scrollToDate(dateStr: string | null) {
   font-weight: 700;
 }
 
-.cal-events { display: flex; flex-direction: column; gap: 2px; }
+.cal-events { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 
 /* 週表示カレンダー */
 .week-calendar {
@@ -719,10 +721,11 @@ function scrollToDate(dateStr: string | null) {
 
 .week-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .week-cell {
+  min-width: 0;
   border-right: 1px solid rgba(255, 46, 26, 0.15);
   min-height: 160px;
   transition: background 0.15s;

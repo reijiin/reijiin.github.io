@@ -399,5 +399,23 @@
     "status": "uploaded",
     "caption": "ブラック・マジシャン・ガールのデュエル・ディスク・ダンスの動画です",
     "thumbnail": "/images/bmg1_4k.jpeg"
+  },
+  {
+    "date": "2026-11-05",
+    "title": "【フルメタルパニック！】テッサ 船上ダンス",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "uploaded",
+    "caption": "【フルメタルパニック！】テッサ 船上ダンスの動画です",
+    "thumbnail": "/images/tessa_4k.jpeg"
+  },
+    {
+    "date": "2026-11-06",
+    "title": "【SAO】アスナ＆シノン ガンダンス＆オアシス",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "アスナ＆シノン ガンダンス＆オアシスの動画です",
+    "thumbnail": "/images/asunaw_4k.jpeg"
   }
 ]
