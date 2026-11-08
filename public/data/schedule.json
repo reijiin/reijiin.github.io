@@ -423,24 +423,26 @@
     "title": "【SAO】アスナ＆シノン ガンダンス＆オアシス",
     "channel": "Asuna Kaleidoscope",
     "channelId": "asuna",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "アスナ＆シノン ガンダンス＆オアシスの動画です",
     "thumbnail": "/images/asuna_g_4k.jpeg"
   },
-    {
+   {
     "date": "2026-11-08",
+    "title": "【D.C.】白河ことり 七変化",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "白河ことりの動画です",
+    "thumbnail": "/images/kotori_hen1.jpeg"
+  },
+  {
+    "date": "2026-11-09",
     "title": "【無職転生】ロキシー",
     "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
     "status": "scheduled",
-    "caption": "無職転のロキシーの動画です"
-  },
-   {
-    "date": "2026-11-08",
-    "title": "【D.C.】白河ことり",
-    "channel": "サクラの国の枯れない桜",
-    "channelId": "sakura",
-    "status": "scheduled",
-    "caption": "白河ことりの動画です"
+    "caption": "無職転のロキシーの動画です",
+    "thumbnail": "/images/roxy_4k.jpeg"
   }
 ]
