@@ -432,7 +432,7 @@
     "title": "【D.C.】白河ことり 七変化",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "白河ことりの動画です",
     "thumbnail": "/images/kotori_hen1.jpeg"
   },
@@ -441,8 +441,17 @@
     "title": "【無職転生】ロキシー",
     "channel": "令和アニメ・ガーリー・パラダイス",
     "channelId": "galaxy",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "無職転のロキシーの動画です",
     "thumbnail": "/images/roxy_4k.jpeg"
+  },
+  {
+    "date": "2026-11-11",
+    "title": "【D.C.Ⅱ】月島小恋 生誕祭 ",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "月島小恋 生誕祭の動画です",
+    "thumbnail": "/images/koko_4k.jpeg"
   }
 ]
