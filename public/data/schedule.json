@@ -450,8 +450,35 @@
     "title": "【D.C.Ⅱ】月島小恋 生誕祭 ",
     "channel": "サクラの国の枯れない桜",
     "channelId": "sakura",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "月島小恋 生誕祭の動画です",
     "thumbnail": "/images/koko_4k.jpeg"
+  },
+    {
+    "date": "2026-11-14",
+    "title": "【遊戯王×東方】博麗霊夢 DuelDiskDance 青眼の白龍",
+    "channel": "Duel Disk Dance",
+    "channelId": "duel",
+    "status": "uploaded",
+    "caption": "博麗霊夢のデュエル・ディスク・ダンス（青眼の白龍）の動画です",
+    "thumbnail": "/images/reimu_d_4k.jpeg"
+  },
+  {
+    "date": "2026-11-15",
+    "title": "【D.C.】アイシア 雪花変身 ",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "アイシア 雪花変身の動画です",
+    "thumbnail": "/images/aishia1_4k.jpeg"
+  },
+  {
+    "date": "2026-11-15",
+    "title": "【化物語】千石撫子 恋愛サーキュレーション",
+    "channel": "平成アニメヒロインReplay",
+    "channelId": "heisei",
+    "status": "scheduled",
+    "caption": "千石撫子 恋愛サーキュレーションの動画です",
+    "thumbnail": "/images/nadeko_4k.jpeg"
   }
 ]
