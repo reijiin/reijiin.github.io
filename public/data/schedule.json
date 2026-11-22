@@ -486,8 +486,33 @@
     "title": "【遊戯王GX】天上院明日香 DuelDiskDance",
     "channel": "Duel Disk Dance",
     "channelId": "duel",
-    "status": "scheduled",
+    "status": "uploaded",
     "caption": "天上院明日香のデュエル・ディスク・ダンスの動画です",
     "thumbnail": "/images/asuka_d_4k.jpeg"
+  },
+    {
+    "date": "2026-11-22",
+    "title": "【遊戯王GX】天上院明日香 DuelDiskDance",
+    "channel": "Duel Disk Dance",
+    "channelId": "duel",
+    "status": "uploaded",
+    "caption": "天上院明日香のデュエル・ディスク・ダンスの動画です",
+    "thumbnail": "/images/asuka_d_4k.jpeg"
+  },{
+    "date": "2026-11-22",
+    "title": "【D.C.Ⅲ】瑠川さら カラオケデート",
+    "channel": "サクラの国の枯れない桜",
+    "channelId": "sakura",
+    "status": "scheduled",
+    "caption": "瑠川さらのカラオケデートの動画です",
+    "thumbnail": "/images/sara_kara_4k.jpeg"
+  },
+    {
+    "date": "2026-11-08",
+    "title": "【SAO】アスナ ウンディーネVer",
+    "channel": "Asuna Kaleidoscope",
+    "channelId": "asuna",
+    "status": "scheduled",
+    "caption": "アスナ ウンディーネVerの動画です"
   }
 ]
